@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Freedom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/title.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="flex justify-center items-center min-h-96 max-w-7xl mx-auto px-2 pt-5">
+        <div class="w-full bg-[url('Images/Outdoorview.jpg')] bg-cover bg-center bg-no-repeat h-[600px] relative">
+            <!-- Nav -->
+            <nav class="flex items-center justify-between p-5">
+                <ul class="flex-1 text-center">
+                    <li class="list-none inline-block px-5"><a href="#"
+                            class="no-underline text-white px-2 font-bold hover:text-blue-800 hover:scale-110 transition-transform duration-200 inline-block">Home</a>
+                    </li>
+                    <li class="list-none inline-block px-5"><a href="#"
+                            class="no-underline text-white px-2 font-bold hover:text-blue-800 hover:scale-110 transition-transform duration-200 inline-block">About</a>
+                    </li>
+                    <li class="list-none inline-block px-5"><a href="#"
+                            class="no-underline text-white px-2 font-bold hover:text-blue-800 hover:scale-110 transition-transform duration-200 inline-block">Features</a>
+                    </li>
+                    <li class="list-none inline-block px-5"><a href="#"
+                            class="no-underline text-white px-2 font-bold hover:text-blue-800 hover:scale-110 transition-transform duration-200 inline-block">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="absolute bottom-5 left-2 text-gray-100 text-6xl font-bold font-serif">Hotel Freedom<p
+                    class="text-2xl">& SPA</p>
+            </h1>
+        </div>
+    </div>
+
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-2 mt-10">
+        <!-- Left side: Hotel name and SPA -->
+        <div>
+            <h1 class="text-6xl font-bold font-serif inline-block">Hotel Freedom</h1>
+            <p class="text-2xl inline-block pt-6">& SPA</p>
+        </div>
+
+        <!-- Right side: Price and per night -->
+        <div>
+            <p class="text-2xl font-bold font-serif inline-block">$425+</p>
+            <p class="text-xl inline-block pt-6">per night</p>
+        </div>
+    </div>
+
+    <!-- Left Side : Location -->
+    <div class="flex max-w-7xl mx-auto px-2">
+        <p><i class="fa-solid fa-location-dot"></i> Hikkaduwa, Sri Lanka</p>
+        <p class="pl-4 font-sans"><i class="fa-solid fa-star" style="color: #f72302;"></i><b>4.9</b> (8.7K review)</p>
+    </div>
+
+    <!-- Horizantal line -->
+    <div class="max-w-7xl mx-auto px-2">
+        <hr class="border-t-2">
+    </div>
+
+    <div class="flex flex-col max-w-7xl mx-auto px-2 mt-5">
+        <p id="hotel-description" class="text-lg leading-relaxed text-justify">
+            Welcome to our luxurious 5-star hotel, where elegance meets comfort. Our property features a range of
+            exquisite accommodations, including spacious suites,
+            <span class="more-content hidden"> two and three-bedroom villas, and elegantly appointed rooms with two to
+                three beds, ensuring a perfect fit for every guest. Enjoy breathtaking beach views and stroll through
+                our lush green gardens for a serene escape. Indulge in culinary delights at our three exclusive
+                cafeterias, or relax by one of our four pristine pools, each offering a unique experience. Immerse
+                yourself in the tranquil environment, where the gentle sea breeze and peaceful surroundings provide the
+                ultimate retreat.</span>
+            <button id="toggle-button"
+                class="text-orange-500 hover:text-orange-700 transition-all duration-300 ease-in-out font-bold"
+                onclick="toggleContent()">See More</button>
+        </p>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-2 mt-5">
+        <div class="text-center mb-4">
+            <h1 class="text-3xl font-bold font-serif inline-block">What we offer</h1>
+        </div>
+        <!-- Container for offering items -->
+        <div class="flex overflow-x-auto gap-28 mt-4 p-6 justify-center  bg-white rounded-2xl shadow-lg">
+            <div
+                class="flex flex-col items-center space-y-2 border border-gray-200 rounded-lg shadow-lg p-4 flex-shrink-0">
+                <i class="fa-solid fa-bed text-3xl"></i>
+                <span class="text-lg font-medium">Bed</span>
+            </div>
+            <div
+                class="flex flex-col items-center space-y-2 border border-gray-200 rounded-lg shadow-lg p-4 flex-shrink-0">
+                <i class="fa-solid fa-utensils text-3xl"></i>
+                <span class="text-lg font-medium">Buffet</span>
+            </div>
+            <div
+                class="flex flex-col items-center space-y-2 border border-gray-200 rounded-lg shadow-lg p-4 flex-shrink-0">
+                <i class="fa-solid fa-swimmer text-3xl"></i>
+                <span class="text-lg font-medium">Pool</span>
+            </div>
+            <div
+                class="flex flex-col items-center space-y-2 border border-gray-200 rounded-lg shadow-lg p-4 flex-shrink-0">
+                <i class="fa-solid fa-baby text-3xl"></i>
+                <span class="text-lg font-medium">Family</span>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="max-w-7xl mx-auto px-2 mt-5">
+        <div class="text-center px-3 mb-4">
+            <h1 class="text-3xl font-bold font-serif inline-block">Explore Amenities</h1>
+        </div>
+        <!-- Images Section -->
+        <div class="relative max-w-7xl mx-auto px-2 mt-10">
+            <div class="flex overflow-x-auto gap-16 hide-scrollbar">
+                <img src="Images/Moctail.jpg" alt="Image A" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/Room.jpg" alt="Image B" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/Pool.jpg" alt="Image C" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/Bathroom.jpg" alt="Image D" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/BedRoom.jpg" alt="Image E" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/Cokking.jpg" alt="Image F" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/Dinner.jpg" alt="Image G" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/BBQ.jpg" alt="Image H" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="max-w-7xl mx-auto px-2 mt-5">
+        <div class="text-center mb-4">
+            <h1 class="text-3xl font-bold font-serif inline-block">Hot Deals</h1>
+        </div>
+        <!-- Safari image with text overlay -->
+        <div class="relative max-w-7xl mx-auto px-2 mt-10 flex justify-center items-center">
+            <div class="relative">
+                <img src="Images/safari.jpg" alt="Image safari" class="w-full h-auto max-w-2xl object-cover rounded-xl shadow-lg shadow-black" />
+                <!-- Text Overlay -->
+                <div class="absolute bottom-4 left-4 text-white bg-black bg-opacity-50 p-4 rounded">
+                    <h2 class="text-lg font-bold">YALA Safari</h2>
+                    <p class="text-sm">If you want to get an incredible experience with animals, you can arrange a YALA safari tour.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br><br><br><br>
+
+
+    <div class="max-w-md mx-auto p-4 bg-white rounded-2xl shadow-lg">
+        <!-- Text Content -->
+        <div class="text-center">
+            <h2 class="text-xl font-bold mb-2">Easy way to book your hotel with us!</h2>
+            <p class="text-gray-500 mb-4">Also book rooms, cabanas, food, tours and many more...</p>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Click Me </button>
+        </div>
+    </div>
+
+    <br>
+    <div class="max-w-7xl mx-auto px-2 mt-5">
+        <footer class="bg-zinc-400 p-4">
+            <!-- Row with text and icons -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                <p class="text-lg mb-2 md:mb-0 text-white">Check us via Social Media</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-blue-500">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/yourphonenumber" target="_blank" class="text-white hover:text-green-500">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Horizontal line -->
+            <hr class="border-t-2 mb-4">
+            <!-- Address row -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                <p class="text-lg mb-2 md:mb-0 text-white px-2 font-bold">Contact</p>
+                <p class="text-lg mb-2 md:mb-0 text-white px-2 font-bold"><i class="fa-solid fa-hotel"></i> Hotel Freedom</p>
+            </div>
+    
+            <div class="flex flex-col md:flex-row mb-4">
+                <p class="text-sm mb-4 md:mb-0 text-white px-2">
+                    <i class="fa-solid fa-house"></i> No 53/A, Matara RD, Hikkaduwa, Galle, Sri Lanka<br>
+                    <i class="fa-solid fa-envelope"></i> hotelfreedom@gmail.com<br>
+                    <i class="fa-solid fa-phone"></i> +94 222 587 666<br>
+                    <i class="fa-solid fa-phone"></i> +94 222 587 667<br>
+                </p>
+                <p class="text-sm mb-4 md:mb-0 text-white px-2">Enjoy Your Leisure Time with Us</p>
+            </div>
+        </footer>
+    </div>
+    
+    
+    <br>
+
+    <!--hiding the scrollbar -->
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    
+
+
+    <!-- JavaScript for toggling content -->
+    <script>
+        function toggleContent() {
+            const moreContent = document.querySelector('.more-content');
+            const toggleButton = document.getElementById('toggle-button');
+
+            if (moreContent.classList.contains('hidden')) {
+                moreContent.classList.remove('hidden');
+                toggleButton.textContent = 'See Less';
+            } else {
+                moreContent.classList.add('hidden');
+                toggleButton.textContent = 'See More';
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

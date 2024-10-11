@@ -38,22 +38,23 @@
         </div>
     </div>
 
-    <div class="flex justify-between items-center max-w-7xl mx-auto px-2 mt-10">
+    <div class="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto px-2 mt-10">
         <!-- Left side: Hotel name and SPA -->
-        <div>
-            <h1 class="text-6xl font-bold font-serif inline-block">Hotel Freedom</h1>
-            <p class="text-2xl inline-block pt-6">& SPA</p>
+        <div class="text-center sm:text-left">
+            <h1 class="text-6xl font-bold font-serif">Hotel Freedom</h1>
+            <p class="text-2xl">& SPA</p>
         </div>
 
         <!-- Right side: Price and per night -->
-        <div>
-            <p class="text-2xl font-bold font-serif inline-block">$425+</p>
-            <p class="text-xl inline-block pt-6">per night</p>
+        <div class="text-center sm:text-right mt-6 sm:mt-0">
+            <p class="text-2xl font-bold font-serif">$425+</p>
+            <p class="text-xl">per night</p>
         </div>
     </div>
 
+
     <!-- Left Side : Location -->
-    <div class="flex max-w-7xl mx-auto px-2">
+    <div class="flex max-w-7xl mx-auto px-2 pt-4">
         <p><i class="fa-solid fa-location-dot"></i> Hikkaduwa, Sri Lanka</p>
         <p class="pl-4 font-sans"><i class="fa-solid fa-star" style="color: #f72302;"></i><b>4.9</b> (8.7K review)</p>
     </div>
@@ -117,16 +118,62 @@
         <!-- Images Section -->
         <div class="relative max-w-7xl mx-auto px-2 mt-10">
             <div class="flex overflow-x-auto gap-16 hide-scrollbar">
-                <img src="Images/Moctail.jpg" alt="Image A" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
-                <img src="Images/Room.jpg" alt="Image B" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
-                <img src="Images/Pool.jpg" alt="Image C" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
-                <img src="Images/Bathroom.jpg" alt="Image D" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
-                <img src="Images/BedRoom.jpg" alt="Image E" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
-                <img src="Images/Cokking.jpg" alt="Image F" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
-                <img src="Images/Dinner.jpg" alt="Image G" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
-                <img src="Images/BBQ.jpg" alt="Image H" class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/Moctail.jpg" alt="Image A"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Room.jpg" alt="Image B"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Pool.jpg" alt="Image C"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Bathroom.jpg" alt="Image D"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/BedRoom.jpg" alt="Image E"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Cokking.jpg" alt="Image F"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Dinner.jpg" alt="Image G"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/BBQ.jpg" alt="Image H"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
             </div>
         </div>
+
+        <!-- Modal -->
+        <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+            <div class="relative">
+                <img id="modalImage" src="" alt="Full Image"
+                    class="w-10/12 h-auto max-h-screen object-contain rounded-lg shadow-xl" />
+                <button class="absolute top-4 right-4 bg-white text-black rounded-full p-2 hover:bg-gray-200"
+                    onclick="closeModal()">
+                    &#10006; <!-- Close Icon -->
+                </button>
+            </div>
+        </div>
+
+        <script>
+            // Function to open modal and display clicked image
+            function openModal(img) {
+                var modal = document.getElementById('imageModal');
+                var modalImg = document.getElementById('modalImage');
+                modalImg.src = img.src;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+
+            // Function to close modal
+            function closeModal() {
+                var modal = document.getElementById('imageModal');
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        </script>
     </div>
     <br>
 
@@ -137,16 +184,18 @@
         <!-- Safari image with text overlay -->
         <div class="relative max-w-7xl mx-auto px-2 mt-10 flex justify-center items-center">
             <div class="relative">
-                <img src="Images/safari.jpg" alt="Image safari" class="w-full h-auto max-w-2xl object-cover rounded-xl shadow-lg shadow-black" />
+                <img src="Images/safari.jpg" alt="Image safari"
+                    class="w-full h-auto max-w-2xl object-cover rounded-xl shadow-lg shadow-black" />
                 <!-- Text Overlay -->
                 <div class="absolute bottom-4 left-4 text-white bg-black bg-opacity-50 p-4 rounded">
                     <h2 class="text-lg font-bold">YALA Safari</h2>
-                    <p class="text-sm">If you want to get an incredible experience with animals, you can arrange a YALA safari tour.</p>
+                    <p class="text-sm">If you want to get an incredible experience with animals, you can arrange a YALA
+                        safari tour.</p>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <br><br><br><br>
 
 
@@ -179,9 +228,10 @@
             <!-- Address row -->
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
                 <p class="text-lg mb-2 md:mb-0 text-white px-2 font-bold">Contact</p>
-                <p class="text-lg mb-2 md:mb-0 text-white px-2 font-bold"><i class="fa-solid fa-hotel"></i> Hotel Freedom</p>
+                <p class="text-lg mb-2 md:mb-0 text-white px-2 font-bold"><i class="fa-solid fa-hotel"></i> Hotel
+                    Freedom</p>
             </div>
-    
+
             <div class="flex flex-col md:flex-row mb-4">
                 <p class="text-sm mb-4 md:mb-0 text-white px-2">
                     <i class="fa-solid fa-house"></i> No 53/A, Matara RD, Hikkaduwa, Galle, Sri Lanka<br>
@@ -189,26 +239,21 @@
                     <i class="fa-solid fa-phone"></i> +94 222 587 666<br>
                     <i class="fa-solid fa-phone"></i> +94 222 587 667<br>
                 </p>
-                <p class="text-sm mb-4 md:mb-0 text-white px-2">Enjoy Your Leisure Time with Us</p>
             </div>
         </footer>
     </div>
-    
-    
-    <br>
 
     <!--hiding the scrollbar -->
     <style>
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
+
         .hide-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
     </style>
-    
-
 
     <!-- JavaScript for toggling content -->
     <script>
@@ -226,7 +271,5 @@
         }
     </script>
 
-
 </body>
-
 </html>

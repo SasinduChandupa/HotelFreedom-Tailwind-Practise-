@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Freedom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/title.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="flex justify-center items-center min-h-96 max-w-7xl mx-auto px-2 pt-5">
+        <div class="w-full bg-[url('Images/Outdoorview.jpg')] bg-cover bg-center bg-no-repeat h-[600px] relative">
+            <!-- Nav -->
+            <nav class="flex items-center justify-between p-5">
+                <ul class="flex-1 text-center">
+                    <li class="list-none inline-block px-5"><a href="#"
+                            class="no-underline text-white px-2 font-bold hover:text-blue-800 hover:scale-110 transition-transform duration-200 inline-block">Home</a>
+                    </li>
+                    <li class="list-none inline-block px-5"><a href="#"
+                            class="no-underline text-white px-2 font-bold hover:text-blue-800 hover:scale-110 transition-transform duration-200 inline-block">About</a>
+                    </li>
+                    <li class="list-none inline-block px-5"><a href="#"
+                            class="no-underline text-white px-2 font-bold hover:text-blue-800 hover:scale-110 transition-transform duration-200 inline-block">Features</a>
+                    </li>
+                    <li class="list-none inline-block px-5"><a href="#"
+                            class="no-underline text-white px-2 font-bold hover:text-blue-800 hover:scale-110 transition-transform duration-200 inline-block">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="absolute bottom-5 left-2 text-gray-100 text-6xl font-bold font-serif">Hotel Freedom<p
+                    class="text-2xl">& SPA</p>
+            </h1>
+        </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto px-2 mt-10">
+        <!-- Left side: Hotel name and SPA -->
+        <div class="text-center sm:text-left">
+            <h1 class="text-6xl font-bold font-serif">Hotel Freedom</h1>
+            <p class="text-2xl">& SPA</p>
+        </div>
+
+        <!-- Right side: Price and per night -->
+        <div class="text-center sm:text-right mt-6 sm:mt-0">
+            <p class="text-2xl font-bold font-serif">$425+</p>
+            <p class="text-xl">per night</p>
+        </div>
+    </div>
+
+
+    <!-- Left Side : Location -->
+    <div class="flex max-w-7xl mx-auto px-2 pt-4">
+        <p><i class="fa-solid fa-location-dot"></i> Hikkaduwa, Sri Lanka</p>
+        <p class="pl-4 font-sans"><i class="fa-solid fa-star" style="color: #f72302;"></i><b>4.9</b> (8.7K review)</p>
+    </div>
+
+    <!-- Horizantal line -->
+    <div class="max-w-7xl mx-auto px-2">
+        <hr class="border-t-2">
+    </div>
+
+    <div class="flex flex-col max-w-7xl mx-auto px-2 mt-5">
+        <p id="hotel-description" class="text-lg leading-relaxed text-justify">
+            Welcome to our luxurious 5-star hotel, where elegance meets comfort. Our property features a range of
+            exquisite accommodations, including spacious suites,
+            <span class="more-content hidden"> two and three-bedroom villas, and elegantly appointed rooms with two to
+                three beds, ensuring a perfect fit for every guest. Enjoy breathtaking beach views and stroll through
+                our lush green gardens for a serene escape. Indulge in culinary delights at our three exclusive
+                cafeterias, or relax by one of our four pristine pools, each offering a unique experience. Immerse
+                yourself in the tranquil environment, where the gentle sea breeze and peaceful surroundings provide the
+                ultimate retreat.</span>
+            <button id="toggle-button"
+                class="text-orange-500 hover:text-orange-700 transition-all duration-300 ease-in-out font-bold"
+                onclick="toggleContent()">See More</button>
+        </p>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-2 mt-5">
+        <div class="text-center mb-4">
+            <h1 class="text-3xl font-bold font-serif inline-block">What we offer</h1>
+        </div>
+        <!-- Container for offering items -->
+        <div class="flex overflow-x-auto gap-28 mt-4 p-6 justify-center  bg-white rounded-2xl shadow-lg">
+            <div
+                class="flex flex-col items-center space-y-2 border border-gray-200 rounded-lg shadow-lg p-4 flex-shrink-0 hover:scale-125 transition duration-300 ease-in-out">
+                <i class="fa-solid fa-bed text-3xl"></i>
+                <span class="text-lg font-medium">Bed</span>
+            </div>
+            <div
+                class="flex flex-col items-center space-y-2 border border-gray-200 rounded-lg shadow-lg p-4 flex-shrink-0 hover:scale-125 transition duration-300 ease-in-out">
+                <i class="fa-solid fa-utensils text-3xl"></i>
+                <span class="text-lg font-medium">Buffet</span>
+            </div>
+            <div
+                class="flex flex-col items-center space-y-2 border border-gray-200 rounded-lg shadow-lg p-4 flex-shrink-0 hover:scale-125 transition duration-300 ease-in-out">
+                <i class="fa-solid fa-swimmer text-3xl"></i>
+                <span class="text-lg font-medium">Pool</span>
+            </div>
+            <div
+                class="flex flex-col items-center space-y-2 border border-gray-200 rounded-lg shadow-lg p-4 flex-shrink-0 hover:scale-125 transition duration-300 ease-in-out">
+                <i class="fa-solid fa-baby text-3xl"></i>
+                <span class="text-lg font-medium">Child</span>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="max-w-7xl mx-auto px-2 mt-5">
+        <div class="text-center px-3 mb-4">
+            <h1 class="text-3xl font-bold font-serif inline-block">Explore Amenities</h1>
+        </div>
+        <!-- Images Section -->
+        <div class="relative max-w-7xl mx-auto px-2 mt-10">
+            <div class="flex overflow-x-auto gap-16 hide-scrollbar">
+                <img src="Images/Moctail.jpg" alt="Image A"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Room.jpg" alt="Image B"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Pool.jpg" alt="Image C"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Bathroom.jpg" alt="Image D"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/BedRoom.jpg" alt="Image E"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Cokking.jpg" alt="Image F"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/Dinner.jpg" alt="Image G"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+                <img src="Images/BBQ.jpg" alt="Image H"
+                    class="w-48 h-48 object-cover rounded-xl shadow-lg shadow-black transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer"
+                    onclick="openModal(this)" />
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+            <div class="relative">
+                <img id="modalImage" src="" alt="Full Image"
+                    class="w-10/12 h-auto max-h-screen object-contain rounded-lg shadow-xl" />
+                <button class="absolute top-4 right-4 bg-white text-black rounded-full p-2 hover:bg-gray-200"
+                    onclick="closeModal()">
+                    &#10006; <!-- Close Icon -->
+                </button>
+            </div>
+        </div>
+
+        <script>
+            // Function to open modal and display clicked image
+            function openModal(img) {
+                var modal = document.getElementById('imageModal');
+                var modalImg = document.getElementById('modalImage');
+                modalImg.src = img.src;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+
+            // Function to close modal
+            function closeModal() {
+                var modal = document.getElementById('imageModal');
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        </script>
+    </div>
+    <br>
+
+    <div class="max-w-7xl mx-auto px-2 mt-5">
+        <div class="text-center mb-4">
+            <h1 class="text-3xl font-bold font-serif inline-block">Hot Deals</h1>
+        </div>
+        <!-- Safari image with text overlay -->
+        <div class="relative max-w-7xl mx-auto px-2 mt-10 flex justify-center items-center">
+            <div class="relative">
+                <img src="Images/safari.jpg" alt="Image safari"
+                    class="w-full h-auto max-w-2xl object-cover rounded-xl shadow-lg shadow-black hover:scale-105 transition duration-300 ease-in-out" />
+                <!-- Text Overlay -->
+                <div class="absolute bottom-4 left-4 text-white bg-black bg-opacity-50 p-4 rounded">
+                    <h2 class="text-lg font-bold">YALA Safari</h2>
+                    <p class="text-sm">If you want to get an incredible experience with animals, you can arrange a YALA
+                        safari tour.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+
+    <div class="max-w-md mx-auto p-4 bg-white rounded-2xl shadow-lg">
+        <!-- Text Content -->
+        <div class="text-center">
+            <h2 class="text-xl font-bold mb-2">Easy way to book your hotel with us!</h2>
+            <p class="text-gray-500 mb-4">Also book rooms, cabanas, food, tours and many more...</p>
+            <button class="open-popup bg-blue-500 text-white px-4 py-2 rounded-full mt-4 font-bold hover:scale-110 transition duration-300 ease-in-out cursor-pointer">Click me</button>
+        </div>
+    </div>
+
+    <!-- Popup box -->
+    <div class="popup-container hidden fixed inset-0 bg-gray-800 bg-opacity-50 items-center justify-center">
+        <div class="popup-box bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative">
+            <button class="close-popup absolute right-2 text-gray-500 hover:text-gray-700">✖</button>
+            <h2 class="text-2xl font-bold mb-4 text-center">Booking Details</h2>
+
+            <!-- Adults Counter -->
+            <div class="flex items-center justify-between mb-4">
+                <label for="adults" class="text-gray-700">Adults</label>
+                <div class="counter">
+                    <button class="decrease-adults w-6 h-6 bg-gray-300 rounded-full">-</button>
+                    <span id="adults-count" class="px-4">1</span>
+                    <button class="increase-adults w-6 h-6 bg-gray-300 rounded-full">+</button>
+                </div>
+            </div>
+
+            <!-- Baby Counter -->
+            <div class="flex items-center justify-between mb-4">
+                <label for="babies" class="text-gray-700">Babies</label>
+                <div class="counter">
+                    <button class="decrease-babies w-6 h-6 bg-gray-300 rounded-full">-</button>
+                    <span id="babies-count" class="px-4">0</span>
+                    <button class="increase-babies w-6 h-6 bg-gray-300 rounded-full">+</button>
+                </div>
+            </div>
+
+            <!-- Days Counter -->
+            <div class="flex items-center justify-between mb-4">
+                <label for="days" class="text-gray-700">Nigths</label>
+                <div class="counter">
+                    <button class="decrease-days w-6 h-6 bg-gray-300 rounded-full">-</button>
+                    <span id="days-count" class="px-4">1</span>
+                    <button class="increase-days w-6 h-6 bg-gray-300 rounded-full">+</button>
+                </div>
+            </div>
+
+            <!-- Room Type Selection -->
+            <div class="mb-4">
+                <label for="room-type" class="text-gray-700">Room Type</label>
+                <select id="room-type" class="w-full mt-2 px-3 py-2 border rounded">
+                    <option value="normal">Normal</option>
+                    <option value="Deluxe rooms">Deluxe rooms</option>
+                    <option value="Junior Suite">Junior Suite</option>
+                    <option value="Studio">Studio</option>
+                    <option value="Cabana">Cabana</option>
+                    <option value="Villa">Villa</option>
+                </select>
+            </div>
+
+            <!-- data input -->
+            <div class="flex flex-col mb-4">
+                <input type="text" value="Name" class="text-gray-700 mb-1">
+                <input type="text" placeholder="Enter your name" class="w-full px-3 py-2 border rounded">
+
+                <input type="text" value="Phone Number" class="text-gray-700 mb-1 mt-2">
+                <input type="text" placeholder="Enter your Phone No (077XXXXXXX)" class="w-full px-3 py-2 border rounded">
+
+                <input type="text" value="NIC" class="text-gray-700 mb-1 mt-2">
+                <input type="text" placeholder="Enter your NIC No" class="w-full px-3 py-2 border rounded">
+            </div>
+            
+            <!-- Submit Button -->
+            <button class="submit-booking w-full bg-blue-500 text-white px-4 py-2 rounded font-bold">Submit</button>
+        </div>
+    </div>
+
+    <!-- ------ -->
+
+    <!-- Script -->
+    <script>    
+        // Open Popup
+        document.querySelector('.open-popup').addEventListener('click', function () {
+            document.querySelector('.popup-container').classList.remove('hidden');
+        });
+
+        // Close Popup
+        document.querySelector('.close-popup').addEventListener('click', function () {
+            document.querySelector('.popup-container').classList.add('hidden');
+        });
+        document.querySelector('.submit-booking').addEventListener('click', function () {
+            document.querySelector('.popup-container').classList.add('hidden');
+        });
+        // Counter functionality
+        let adultsCount = 1;
+        let babiesCount = 0;
+        let daysCount = 1;
+
+        document.querySelector('.increase-adults').addEventListener('click', function () {
+            adultsCount++;
+            document.getElementById('adults-count').textContent = adultsCount;
+        });
+
+        document.querySelector('.decrease-adults').addEventListener('click', function () {
+            if (adultsCount > 1) {
+                adultsCount--;
+                document.getElementById('adults-count').textContent = adultsCount;
+            }
+        });
+
+        document.querySelector('.increase-babies').addEventListener('click', function () {
+            babiesCount++;
+            document.getElementById('babies-count').textContent = babiesCount;
+        });
+
+        document.querySelector('.decrease-babies').addEventListener('click', function () {
+            if (babiesCount > 0) {
+                babiesCount--;
+                document.getElementById('babies-count').textContent = babiesCount;
+            }
+        });
+
+        document.querySelector('.increase-days').addEventListener('click', function () {
+            daysCount++;
+            document.getElementById('days-count').textContent = daysCount;
+        });
+
+        document.querySelector('.decrease-days').addEventListener('click', function () {
+            if (daysCount > 1) {
+                daysCount--;
+                document.getElementById('days-count').textContent = daysCount;
+            }
+        });
+
+    </script>
+
+    <br>
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++    Chat Bot    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- Button to open the chatbot -->
+    <div class="flex justify-center mt-10">
+        <button onclick="openChatbot()" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">
+            Click to chat with me
+        </button>
+    </div>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbotModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white w-96 rounded-lg shadow-lg">
+            <div class="flex justify-between items-center bg-blue-500 text-white p-4 rounded-t-lg">
+                <h2 class="text-lg">Chatbot</h2>
+                <button onclick="closeChatbot()" class="text-xl font-bold">&times;</button>
+            </div>
+            <div class="p-4 h-80 overflow-y-auto" id="chatBody">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="flex p-4 border-t">
+                <input type="text" id="userInput" class="flex-grow border rounded-lg p-2" placeholder="Type your message here...">
+                <button onclick="sendMessage()" class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the chatbot modal
+        function openChatbot() {
+            document.getElementById('chatbotModal').classList.remove('hidden');
+        }
+
+        // Function to close the chatbot modal
+        function closeChatbot() {
+            document.getElementById('chatbotModal').classList.add('hidden');
+        }
+
+        // Predefined responses from the bot
+        const botResponses = {
+            "hello": "Hi there! How can I help you?",
+            "location": "Hotel Freedom, Galle Rd, Hikkaduwa",
+            "bye": "Goodbye! Have a great day!",
+            "default": "I'm not sure what you mean. Could you rephrase that?"
+        };
+
+        // Function to send the user's message
+        function sendMessage() {
+            const userInput = document.getElementById("userInput").value;
+            if (userInput.trim() === "") {
+                return;
+            }
+
+            addMessageToChat("text-right text-blue-600", userInput);
+            document.getElementById("userInput").value = "";
+
+            // Bot response after a short delay
+            setTimeout(() => {
+                const botResponse = getBotResponse(userInput.toLowerCase());
+                addMessageToChat("text-left text-green-600", botResponse);
+            }, 500);
+        }
+
+        // Function to get the bot's response
+        function getBotResponse(input) {
+            // Check if input matches any predefined responses
+            return botResponses[input] || botResponses["default"];
+        }
+
+        // Function to add a message to the chat body
+        function addMessageToChat(messageClass, message) {
+            const chatBody = document.getElementById("chatBody");
+            const messageElement = document.createElement("div");
+            messageElement.className = `my-2 ${messageClass}`;
+            messageElement.innerText = message;
+            chatBody.appendChild(messageElement);
+            chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
+        }
+    </script>
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+    <br>
+    <div class="max-w-7xl mx-auto px-2 mt-5">
+        <footer class="bg-zinc-400 p-4">
+            <!-- Row with text and icons -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                <p class="text-lg mb-2 md:mb-0 text-white">Check us via Social Media</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-blue-500">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/yourphonenumber" target="_blank" class="text-white hover:text-green-500">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Horizontal line -->
+            <hr class="border-t-2 mb-4">
+            <!-- Address row -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                <p class="text-lg mb-2 md:mb-0 text-white px-2 font-bold">Contact</p>
+                <p class="text-lg mb-2 md:mb-0 text-white px-2 font-bold"><i class="fa-solid fa-hotel"></i> Hotel
+                    Freedom</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row mb-4">
+                <p class="text-sm mb-4 md:mb-0 text-white px-2">
+                    <i class="fa-solid fa-house"></i> No 53/A, Matara RD, Hikkaduwa, Galle, Sri Lanka<br>
+                    <i class="fa-solid fa-envelope"></i> hotelfreedom@gmail.com<br>
+                    <i class="fa-solid fa-phone"></i> +94 222 587 666<br>
+                    <i class="fa-solid fa-phone"></i> +94 222 587 667<br>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!--hiding the scrollbar -->
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+    <!-- JavaScript for toggling content -->
+    <script>
+        function toggleContent() {
+            const moreContent = document.querySelector('.more-content');
+            const toggleButton = document.getElementById('toggle-button');
+
+            if (moreContent.classList.contains('hidden')) {
+                moreContent.classList.remove('hidden');
+                toggleButton.textContent = 'See Less';
+            } else {
+                moreContent.classList.add('hidden');
+                toggleButton.textContent = 'See More';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
